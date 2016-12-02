@@ -48,7 +48,7 @@ while i < len(program):
 			
 print(schools, scores)
 
-with open('usnwr_schools.csv', 'w') as f:
+with open('usnwr_schools.csv', 'w', newline='') as f:
 	writer = csv.writer(f)
 	for school, score in zip(schools, scores):
 		writer.writerow([school.encode('utf-8'), score])
